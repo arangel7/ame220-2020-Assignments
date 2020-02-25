@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  </head>
+<style>
+  img{
+display: block;
+height: 300px;
+  }
+  </style>
+  <body>
+
+
+<div class="w3-content" style="max-width:800px">
+  <img class="slideShow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Acer_diabolicum_9_%28medium_crop%29.jpg/320px-Acer_diabolicum_9_%28medium_crop%29.jpg">
+  <img class="slideShow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Delos_Museum_Mosaik_Dionysos_09.jpg/240px-Delos_Museum_Mosaik_Dionysos_09.jpg">
+  <img class="slideShow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/CSIRO_ScienceImage_3881_Five_Antennas_at_Narrabri_-_restoration1.jpg/800px-CSIRO_ScienceImage_3881_Five_Antennas_at_Narrabri_-_restoration1.jpg">
+</div>
+
+<div class="w3-center">
+  <button class="w3-button slide" onclick="currentDiv(1)">1</button>
+  <button class="w3-button slide" onclick="currentDiv(2)">2</button>
+  <button class="w3-button slide" onclick="currentDiv(3)">3</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("slideShow");
+  var dots = document.getElementsByClassName("slide");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace;
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className;
+}
+</script>
+
+</body>
+</html>
